@@ -106,7 +106,7 @@ describe('funcache tests', () => {
       return { a };
     }
 
-    const cf = funcache(f, {
+    const cf: (a: string) => Promise<Ret> = funcache(f, {
       primitive: true,
       async: true,
     });

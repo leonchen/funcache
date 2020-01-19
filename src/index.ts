@@ -10,9 +10,7 @@ export interface Options<T> {
   primitive?: boolean;
 }
 
-export interface Func<T> {
-  (...args: any[]): T | Promise<T>;
-}
+export type Func<T> = ((...args: any[]) => T) | ((...args: any[]) => Promise<PromiseInfer<T>>);
 
 export const CACHE_KEY_NAMESPACE = '2a848cdb-6acd-48d5-ac74-970972c1038e';
 export const KEY_JOINER = '\u200d';
