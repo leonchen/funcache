@@ -44,4 +44,4 @@ const resp1 = cachedFunc('id'); // cached
 * `max`: The maximum size of the cache for this function. Default is `Infinity`. Setting it to `0` also makes it be `Infinity`.
 * `primitive`: If all the arguments are strings, use them to get the cache key directly instead of hashing. This should improve the performance a bit. Default is `false'.
 * `async`: To cache the resolved values instead of the returned promise. Default is `false`. You may probably always want it to be `true` for async functions.
-* `cacheAgeGetter`: A custom function to get the cache ttl (in milliseconds) based on the function return(resolved). Return `-1` will cause no-caching at all. The example code above shows a good use case for this option.
+* `cacheAgeGetter`: An optional custom function to get the cache ttl (in milliseconds) based on the function return(resolved). Return `-1` will cause no-caching at all. This will be passed to the `set` function of `lru-cache`. Default is `0`. The example code above shows an use case for this option.
