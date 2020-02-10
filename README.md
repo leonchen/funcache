@@ -2,6 +2,20 @@
 
 A helper tool to cache function results, based on [lru-cache](https://github.com/isaacs/node-lru-cache), inspired by [memoizee](https://github.com/medikoo/memoizee).
 
+## Difference with memoizee
+
+`memoizee` is very useful, but it lacks the ability for **conditional caching** and this is `funcache` mainly for.
+
+One simple case of **conditional caching** is, saying there is an api that returns the result of a workflow, and you want to cache the api response only when the its status is `completed`. There is no direct way to achieve this by using `memoizee` as it doesn't deal with the function result. With `funcache` you can simply set the option like this:
+
+```
+cacheAgeGetter: (res) => {
+  if (res.status === 'completed') return 0; // 0 means infinity
+  return -1; // -1 means no cache
+}
+
+```
+
 ## Install
 
 ```
