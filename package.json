@@ -1,6 +1,6 @@
 {
   "name": "funcache",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "cache function calls",
   "main": "dist/index.js",
   "scripts": {
@@ -32,13 +32,8 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testPathIgnorePatterns": [
-      "node_modules/",
-      "src/"
-    ],
+    "testPathIgnorePatterns": ["node_modules/", "src/"],
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.js$",
-    "moduleFileExtensions": [
-      "js"
-    ]
+    "moduleFileExtensions": ["js"]
   }
 }
