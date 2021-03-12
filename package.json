@@ -19,7 +19,7 @@
   "homepage": "https://github.com/leonchen/funcache#readme",
   "dependencies": {
     "lru-cache": "^5.1.1",
-    "uuid": "^3.3.3"
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.7",
