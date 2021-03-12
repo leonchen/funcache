@@ -1,6 +1,6 @@
 {
   "name": "funcache",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "cache function calls",
   "main": "dist/index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/leonchen/funcache#readme",
   "dependencies": {
     "lru-cache": "^5.1.1",
+    "node-notifier": ">=8.0.1",
     "uuid": "^3.4.0"
   },
   "devDependencies": {
@@ -32,8 +33,13 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testPathIgnorePatterns": ["node_modules/", "src/"],
+    "testPathIgnorePatterns": [
+      "node_modules/",
+      "src/"
+    ],
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.js$",
-    "moduleFileExtensions": ["js"]
+    "moduleFileExtensions": [
+      "js"
+    ]
   }
 }
