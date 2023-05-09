@@ -1,2 +1,4 @@
 src
 dist/*.test.*
+README.md
+tsconfig.json
